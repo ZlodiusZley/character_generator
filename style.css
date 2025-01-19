@@ -1,0 +1,88 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+.result{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.result div{
+    width: 10%;
+    margin-left: 20px;
+  }
+
+.hero_card{
+    width: 25%;
+}
+
+.content__main{
+    display: flex;
+}
+
+.check {
+    width: 60px;
+    cursor: pointer;
+    position:relative;
+    height:20px;
+    box-sizing: border-box;
+    margin:0;
+}
+.check::before {
+    content:'';
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    background-color: #249be5;
+    border: 1px solid #bab5b5;
+    cursor: pointer;
+    transition:0.5s ease-in-out
+}
+  
+.check::after {
+    position: absolute;
+    content:'';
+    display: block;
+    width: 20px;
+    height: 100%;
+    border-radius: 50%;
+    background-color:#fff;
+    border: 1px solid #bab5b5;
+    box-sizing: border-box;
+    cursor: pointer;
+    top: 1px;
+    transition:0.5s ease-in-out
+}
+
+.check:checked.check::before{
+    background-color: pink;
+}
+.check:checked.check::after{
+    margin-left: 42px;
+}
+.check:checked~.male{
+    opacity: 0;
+}
+.check:checked~.female{
+    opacity: 1;
+}
+
+span{
+    left: 63px;
+    position: absolute;
+}
+
+.female{
+    opacity: 0;
+}
+
+.gender{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-left: 6px;
+}
