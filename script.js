@@ -12,8 +12,6 @@ hero.addEventListener('click', () => {
   let characters = {};
   let check = document.querySelector('.check').checked
   let age = Math.round(Math.random() * (120-0)+0)
-  // let random_name = Math.round(Math.random() * (9-0)+0)
-  // let random_surname = Math.round(Math.random() * (9-0)+0)
   let random_proffesion = Math.round(Math.random() * (9-0)+0)
   if(check){
     let random_name = Math.floor(Math.random() * name_female.length);
